@@ -42,6 +42,18 @@ for (let numero of numeros) {
       console.log(numero);
     }
 
+
+
+//Contador de letras con bucle for...of
+function contadorLetras(a){
+  let sumador = 0;
+  for (let iterador of a){
+      sumador++;
+  }
+  return sumador;
+}
+
+console.log(contadorLetras("holaMundo"))
 //Recibir los datos desde el DOM
 //Para evitar que un codigo se ejecute solo
 //lo controlamos con funciones
