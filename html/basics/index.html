@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+  <ul id="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
     <h1>This is heading 1</h1>
     <h2>This is heading 2</h2>
     <h3>This is heading árbol 3</h3>
@@ -40,7 +46,104 @@
         For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
         </blockquote>
 
-        <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
-        
+       <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+       <a href="default.asp">
+       <img src="media/aero.png" alt="HTML tutorial" style="width:42px;height:42px;">
+      </a>
+      <style>
+        table, th, td {
+          border:1px solid black;
+          border-radius: 10px;
+        }
+
+        #menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+#menu li {
+  float: left;
+}
+
+#menu a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+
+        </style>
+
+
+      <table>
+
+       
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Person 1</th>
+          <th>Person 2</th>
+          <th>Person 3</th>
+        </tr>
+        <tr>
+          <td>Emil</td>
+          <td>Tobias</td>
+          <td>Linus</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>14</td>
+          <td>10</td>
+        </tr>
+      </table>
+
+      
+      <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+
+      <ul style="list-style-type:none;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+
+      <ul>
+        <li>Coffee</li>
+        <li>Tea
+          <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+          </ul>
+        </li>
+        <li>Milk</li>
+      </ul>
 </body>
 </html>
