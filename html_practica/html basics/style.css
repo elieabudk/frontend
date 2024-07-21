@@ -1,0 +1,49 @@
+#container {
+    
+    width: 100%;
+    border-style: solid;
+    border-color: red;
+}
+
+#logo {
+    display:inline-block;
+    width: 100px;
+    border-style: solid;
+    border-color: rgb(0, 255, 89);
+}
+
+#menu {
+
+    height: 120px;
+    display:inline-block;
+    width: 700px;
+    border-style: solid;
+    border-color: rgb(166, 0, 255);
+}
+
+#portada {
+    width: 80%;  
+    
+    margin: auto;
+    
+    border-style: solid;
+    border-color: rgb(0, 255, 132);
+    height: 350px;
+
+    
+}
+#portada div {
+    width:200px;  
+   float: left;
+   border-style: dotted;
+    border-color: rgb(166, 0, 255);
+}
+
+#pie {
+    
+    margin: auto;
+    width: 80%;
+    border-style: solid;
+    border-color: rgb(21, 0, 255);
+
+}

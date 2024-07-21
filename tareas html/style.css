@@ -1,0 +1,118 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+    border-style: solid;
+  border-color: green;
+}
+
+#titulo_total {
+
+    text-align: center;
+    margin-bottom: 20px;
+    border-style: solid;
+  border-color: rgb(128, 0, 51);
+}
+
+#titulo h1 {
+    color: #1877f2;
+    font-size: 60px;
+    text-align: left;
+}
+
+#titulo p {
+    color: #606770;
+    font-size: 20px;
+}
+
+#titulo {
+    float : left;
+}
+
+#datos {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border-style: solid;
+  border-color: rgb(6, 0, 128);
+}
+
+#datos input[type="text"] {
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+#datos button {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#datos button#crear {
+    background-color: #42b72a;
+}
+
+#datos button:hover {
+    background-color: #165cbb;
+}
+
+#datos button#crear:hover {
+    background-color: #36a420;
+}
+
+#crear_pagina_total {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#crear_pagina p {
+    color: #606770;
+    font-size: 14px;
+}
+
+#crear_pagina a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#idiomas_total {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#idiomas p {
+    color: black;
+    font-size: 12px;
+}
+
+#idiomas a {
+    color: black;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+

@@ -1,0 +1,40 @@
+* {
+    color: white;
+    background-color: black;
+}
+/* Single line comment */
+p {
+    text-align: center; 
+    
+    color: rgb(238, 255, 0);
+    
+  }
+header { 
+    background: black;
+      
+}
+
+footer {
+    background: rgb(255, 255, 255); 
+}
+
+main {
+    width: 700px;
+    height: 200px;
+    padding: 20px;
+    
+}
+
+#titulo_2_main{
+    background-color: red;
+
+}
+
+
+.titulo-1-main{
+    background-color: aquamarine;
+}
+
+#parrafo_main {
+    background-color: aqua;
+}
