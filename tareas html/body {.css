@@ -1,0 +1,131 @@
+body {
+    
+    /*flex-direction: row;  O 'row' si quieres en fila */
+    /*align-items: center;  Centra horizontalmente */
+    /*justify-content: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+
+}
+
+div#container{
+    width:1000px;  
+    float:left;
+}
+
+div#titulo_total {
+    width: 500px;
+
+}
+
+div#titulo {
+   
+    overflow:auto;
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+div#datos {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+div#crear_pagina {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+div#idiomas {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    color: #1877f2;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #606770;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button#inicio {
+    background-color: #1877f2;
+}
+
+button#crear {
+    background-color: #42b72a;
+}
+
+button:hover {
+    background-color: #165cbb;
+}
+
+button#crear:hover {
+    background-color: #36a420;
+}
+
+
+a {
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p a {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
