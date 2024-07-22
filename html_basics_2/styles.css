@@ -1,0 +1,72 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  border-style: dotted;
+  border-color: blue;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+    border-style: solid;
+  border-color: blue;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 30px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+    border-style: dotted;
+  border-color: red;
+}
+
+/* Clear floats after the columns */
+section::after { /* ::after -> pseudo-elemento (deben tener un contenido vacío) */
+  content: "";
+  display: table;
+  clear: both;
+ 
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+    border-style: solid;
+  border-color: green;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) { /* Media query (Consulta de medios) */
+  nav, article {
+    width: 100%;
+    height: auto; /* La altura del nav y del article se van a adaptar al contenido */
+  }
+}
