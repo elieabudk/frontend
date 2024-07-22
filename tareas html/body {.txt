@@ -1,0 +1,123 @@
+body {
+    
+    /*flex-direction: row;  O 'row' si quieres en fila */
+    /*align-items: center;  Centra horizontalmente */
+    /*justify-content: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+
+}
+
+#container {
+    width: 100%; /*tamaño del contenedor principal*/ 
+    overflow:auto;
+    border-style: dotted;
+    margin-top: 150px;
+}
+
+#titulo_total{
+    width: 80%;
+    height: 250px;
+    margin:0 auto;
+    
+    border-style: solid;
+    padding: 10px;
+    border-color:rgb(255, 0, 17);
+}
+
+#titulo {
+    width: 300px;
+    float: left;
+    border-style: dashed;
+    padding: 10px;
+    border-color: blueviolet;
+    text-align: center;
+}
+
+#datos {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    float: left;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+
+}
+
+
+#crear_pagina_total{
+    
+    border-style: dashed;
+
+    width: 80%;
+    height: 60px;
+    margin:0 auto;
+}
+
+#crear_pagina{
+    float: right;
+    border-style: dashed;
+    
+    margin-right: 100px;
+}
+
+#idiomas_total {
+    border-style: dashed;
+
+    width: 80%;
+    height: 60px;
+    margin:0 auto;
+
+}
+
+#idiomas {
+    border-style: dashed;
+
+    width: 80%;
+    height: 60px;
+    margin:0 auto;
+
+}
+
+
+input[type="text"] {
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button#inicio {
+    background-color: #1877f2;
+}
+
+button#crear {
+    background-color: #42b72a;
+}
+
+button:hover {
+    background-color: #165cbb;
+}
+
+button#crear:hover {
+    background-color: #36a420;
+}
