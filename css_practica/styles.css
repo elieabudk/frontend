@@ -1,0 +1,74 @@
+.contenedor{
+    width: 100%;
+    /*Desbordamiento:  que si se desborda no aparezca la barra*/
+    overflow: auto; 
+    background-color: aqua;
+}
+
+.p1 {
+    background-color: blueviolet;
+    width: 150px;
+    float: left;
+    /*Margin o margen externo*/
+    margin-top: 5%; /*arriba*/
+    margin-bottom: 5%;  /*abajo*/
+    margin-right: 5%; /*derecha*/
+    margin-left: 5%; /*izquierda*/
+    border-style: solid;
+    /*Padding o margen interno*/
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    font-size:1vw;
+}
+
+
+.p2 {
+    background-color: aquamarine;
+    width: 150px;
+    
+    float: left;
+    /*Margin o margen externo*/
+    margin-top: 5%; /*arriba*/
+    margin-bottom: 5%;  /*abajo*/
+    margin-right:5%; /*derecha*/
+    margin-left: 5%; /*izquierda*/
+    border-style: solid;
+    /*Padding o margen interno*/
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    font-size:1vw;
+}
+
+.p3 {
+
+    background-color: bisque;
+    width: 150px;
+    float: left;
+    margin-top: 5%; /*arriba*/
+    margin-bottom: 5%;  /*abajo*/
+    margin-right:5%; /*derecha*/
+    margin-left: 5%; /*izquierda*/
+    border-style: solid;
+    /*Padding o margen interno*/
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    font-size:1vw;
+}
+
+@media (max-width: 800px) {
+    .p1, .p2, .p3{
+      width: 80%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .p1, .p2, .p3{
+      width: 80%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }

@@ -1,0 +1,28 @@
+
+
+
+#contenedor1 {
+    border-style:double;
+}
+
+#contenedor2 {
+    
+    border-style: double;
+    
+}
+h1{
+    width: 25%;
+    border-style: dotted;
+    display: inline-block;
+
+}
+
+
+#parrafo3 p {
+    width: 30%;
+    display: inline-block;
+    border-style: double;
+    
+
+
+}
