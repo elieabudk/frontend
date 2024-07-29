@@ -1,0 +1,86 @@
+#banner {
+    background-image: url(madia/imagen.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
+    background-size: cover;
+    position: relative; /* Necesario para que los elementos hijos con posición absoluta se posicionen respecto al banner */
+ }
+ 
+ #banner p, #banner h1 {
+     color: aliceblue;
+     position: absolute; /* Permite posicionar los elementos de manera específica */
+     transform: translate(-50%, -50%); /* Centra los elementos */
+ }
+ 
+ #banner p {
+     font-size: 2vw; /* Unidades relativas para que el tamaño del texto sea responsive */
+     top: 80%; /* Ajusta según sea necesario */
+     left: 30%; /* Ajusta según sea necesario */
+ }
+ 
+ #banner h1 {
+     font-size: 5vw; /* Unidades relativas para que el tamaño del texto sea responsive */
+     top: 60%; /* Ajusta según sea necesario */
+     left: 20%; /* Ajusta según sea necesario */
+ }
+ 
+ /* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
+ @media (max-width: 768px) {
+     #banner {
+         height: 500px; /* Ajusta la altura del banner para pantallas más pequeñas */
+     }
+ 
+     #banner p {
+         font-size: 4vw; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+         top: 70%; /* Ajusta la posición del párrafo para pantallas más pequeñas */
+         left: 50%; /* Ajusta la posición del párrafo para pantallas más pequeñas */
+     }
+ 
+     #banner h1 {
+         font-size: 8vw; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+         top: 50%; /* Ajusta la posición del h1 para pantallas más pequeñas */
+         left: 50%; /* Ajusta la posición del h1 para pantallas más pequeñas */
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     #banner {
+         height: 300px; /* Ajusta la altura del banner para pantallas muy pequeñas */
+     }
+ 
+     #banner p {
+         font-size: 5vw; /* Ajusta el tamaño del texto para pantallas muy pequeñas */
+         top: 80%; /* Ajusta la posición del párrafo para pantallas muy pequeñas */
+         left: 50%; /* Ajusta la posición del párrafo para pantallas muy pequeñas */
+     }
+ 
+     #banner h1 {
+         font-size: 10vw; /* Ajusta el tamaño del texto para pantallas muy pequeñas */
+         top: 60%; /* Ajusta la posición del h1 para pantallas muy pequeñas */
+         left: 50%; /* Ajusta la posición del h1 para pantallas muy pequeñas */
+     }
+ }
+
+ul {
+    padding: 10%;
+    display: block;
+    
+    font-size: 200%;
+    list-style-type:none;
+
+    
+}
+
+li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  

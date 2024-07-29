@@ -1,0 +1,49 @@
+#imagen {
+    
+    position: absolute;
+    top: 200px;  /* Se mueve 10px hacia abajo desde su posición original */
+    left: 300px; /* Se mueve 20px hacia la derecha desde su posición original */
+}
+
+
+#datos {
+    width: 190px;
+    height: 250px;
+    position: absolute;
+    top: 200px;  /* Se mueve 10px hacia abajo desde su posición original */
+    left: 850px; /* Se mueve 20px hacia la derecha desde su posición original */
+    text-align: center;
+    
+}  
+
+
+
+#cuenta {
+    width: 250px;
+    position: absolute;
+    top: 475px;  /* Se mueve 10px hacia abajo desde su posición original */
+    left: 830px; 
+    text-align: center;
+
+}
+
+#descarga{
+    width: 250px;
+    position: absolute;
+    top: 520px;  /* Se mueve 10px hacia abajo desde su posición original */
+    left: 830px;
+    text-align: center;
+    
+
+}
+
+#play {
+    width: 300px;
+    position: absolute;
+    top: 550px;  /* Se mueve 10px hacia abajo desde su posición original */
+    left: 800px;
+    text-align: center;
+    
+    
+    
+}

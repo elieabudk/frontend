@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+#header1 {
+    border-style: solid;
+    height: 150px;
+    text-align: center;
+    width: 100%;
+}
+
+nav {
+    margin-top: 20px;
+    border-style: solid;
+    text-align: center;
+    width: 100%;
+
+
+}
+
+aside {
+    border-style: solid;
+    width: 30%;
+    height: 1000px;
+    text-align: center;
+    margin-top: 2%;
+    float: left;
+    
+}
+
+main {
+    margin-top: 2%;
+    border-style: solid;
+    height: 1000px;
+    max-width: 70%;
+    margin-left: 40%;
+    
+
+}
+
+footer {
+    border-style: solid;
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        float: none;
+        margin-top: 2%;
+    }
+    main {
+        margin-top: 2%;
+        
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
