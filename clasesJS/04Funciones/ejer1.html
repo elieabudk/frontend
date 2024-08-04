@@ -1,0 +1,99 @@
+<!--
+//1 Acceder al DOM
+document.getElementById("id")
+//2 Manipular el DOM
+element.textContent
+element.innerHTML
+//3 Eventos en el DOM
+CLICK, INPUT, SUBMIT...
+element.addEventListener("event", funcion)
+//Operaciones dentro de JS
+Funciones, declaración de variables y POO.
+//Actualización del DOM
+Todo lo que hacemos desde js y html.
+-->
+
+<h1>Programa que suma dos numeros</h1>
+<input type="number" id="numberInput">
+<input type="number" id="numberInput1">
+<button id="sendButton">Sumar</button>
+<button id="sendButton1">Multiplicar</button>
+<button id="sendButton2">restar</button>
+<button id="sendButton3">dividir</button>
+<button id="sendButton3">CE</button>
+<p id="showParraf"></p>
+<input type="text" id="resultCalc" readonly>
+
+<script>
+
+    function suma(a,b){
+        return a+b;
+    }
+
+    //documento-obtieneElementoID-BOTÓN-agregaUnEventoEscucha(ante un clic-funcion)
+    document.getElementById("sendButton").addEventListener("click", function(){
+        //Funcion interna (Función propia del botón)
+        //Obtener el valor que el usuario me envía
+        let numero = document.getElementById("numberInput").value;
+        let numero1=document.getElementById("numberInput1").value;
+        //Operacion
+        //let resultado = parseFloat(numero) + parseFloat(numero1)
+        //Mostrar resultado en el DOM (Edición)
+        //document.getElementById("showParraf").textContent = "El resultado es: " + resultado;
+        document.getElementById("showParraf").textContent = suma(parseFloat(numero),parseFloat(numero1) )
+        //Limpiar elementos label
+        document.getElementById("resultCalc").value = suma(parseFloat(numero),parseFloat(numero1))
+        document.getElementById("numberInput").value = "";
+        document.getElementById("numberInput1").value = "";
+    });
+
+    document.getElementById("sendButton1").addEventListener("click", function(){
+        let numero = document.getElementById("numberInput").value
+        let numero1 = document.getElementById("numberInput1").value
+
+        let resultado = parseFloat(numero) * parseFloat(numero1)
+
+        document.getElementById("showParraf").textContent = "el resultado: " + resultado
+        document.getElementById("numberInput").value=""
+        document.getElementById("numberInput1").value = "";
+    })
+
+    document.getElementById("sendButton2").addEventListener("click", function(){
+        
+        let numero = document.getElementById("numberInput").value
+        let numero1= document.getElementById("numberInput1").value
+
+        let resultado = parseFloat(numero) - parseFloat(numero1)
+           
+        document.getElementById("showParraf").textContent = "el resultado es: " + resultado
+
+        document.getElementById("numberInput").value = "";
+        document.getElementById("numberInput1").value = "";
+        
+
+    })
+
+
+    document.getElementById("sendButton3").addEventListener("click", function(){
+        
+        let numero=document.getElementById("numberInput").value
+        let numero1=document.getElementById("numberInput1").value
+
+        
+
+        if (parseFloat(numero1) === 0){
+            alert("no se puede dividir entre 0")
+        }
+        else{
+            let resultado= parseFloat(numero) / parseFloat(numero1)
+            document.getElementById("showParraf").textContent = "el resultado es: " + resultado
+            document.getElementById("numberInput").value = "";
+            document.getElementById("numberInput1").value = "";
+        }
+        
+        
+
+    })
+
+
+</script>
