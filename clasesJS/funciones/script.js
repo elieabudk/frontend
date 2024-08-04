@@ -1,5 +1,5 @@
 // Funcion (Declaracion basica)
-function saludar(){
+function Saludar(){
     //Cuerpo de la función (Instrucciones)
     console.log("Hola, bienvenido")
 }
@@ -10,7 +10,7 @@ function saludar(){
 // 1.  Desde el archivo js
 // 2. Desde el DOM (Desde html)
 
-saludar()
+Saludar()
 
 //Funciones con parámetros
 let elie = "hola"
