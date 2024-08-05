@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Factura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 250px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        select {
+            appearance: none; /* Ocultar el estilo predeterminado de los selects en algunos navegadores */
+        }
+        .adquirente {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Factura</h1>
+    <form>
+        <label for="establecimiento">Establecimiento:*</label>
+        <select id="establecimiento">
+            <option value="">Seleccione</option>
+            </select>
+        <br>
+        <label for="nombreComercial">Nombre comercial:*</label>
+        <input type="text" id="nombreComercial" required>
+        <br>
+        <label for="fechaEmision">Fecha de emisión:</label>
+        <input type="date" id="fechaEmision" value="2024-08-04">
+        <br>
+        <label for="puntoEmision">Punto de emisión:*</label>
+        <select id="puntoEmision">
+            <option value="">Seleccione</option>
+            </select>
+        <br>
+        <label for="guiaRemision">Guía de remisión:</label>
+        <input type="text" id="guiaRemision">
+        <br>
+        <label for="facturaComercial">Factura comercial negociable:</label>
+        <input type="checkbox" id="facturaComercial">
+    </form>
+    <div class="adquirente">
+        <h2>Adquirente</h2>
+        <label for="identificacion" class="required">Identificación:</label>
+        <input type="text" id="identificacion" placeholder="RUC/CI/Pasaporte/Id. exterior">
+        <label for="tipoIdentificacion" class="required">Tipo de identificación:</label>
+        <select id="tipoIdentificacion">
+            <option value="">Seleccione</option>
+            </select>
+        <label for="razonSocial" class="required">Razón social:</label>
+        <input type="text" id="razonSocial">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono">
+        <label for="correoElectronico"   
+ class="required">Correo electrónico:</label>
+        <input type="email" id="correoElectronico">
+        <p>Recuerde revisar el correo electrónico para garantizar que el comprobante sea entregado exitosamente.</p>
+    </div>
+</body>
+</html>
+

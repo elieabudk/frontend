@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p><input type="text" id="valores" placeholder="Ingrese números"></p>
+    <p><input type="text" id="buscar_valores" placeholder="buscar número" ></p>
+    
+    <p><button onclick="Guardar()" id="guardar_valores">enviar </button></p>
+    <p><button onclick="Mostrar()" id="buscar_numero">buscar</button></p>
+
+    <p>
+        <ul id="lista1">
+        
+    </ul></p>
+
+
+    <script>
+        let posicion 
+        const lista = []
+        function Guardar(){
+            let dato = document.getElementById("valores").value
+
+            lista.push(dato)
+            console.log(lista)
+            //Crear un elemento li para una lista desordenada
+            const node =document.createElement("li")
+            const texto =document.createTextNode(dato)
+            node.appendChild(texto)
+            document.getElementById("lista1").appendChild(node)
+            //Limpiando el campo donde se ingresan los datos
+            document.getElementById("valores").value =""
+        }
+        
+        function Mostrar(){
+            
+            let dato = document.getElementById("buscar_valores").value
+            let bandera = false
+            for (let i of lista){
+                if(i == dato){
+                    bandera = true
+                    posicion = lista.indexOf(i)
+                    break
+ 
+                }
+            }
+            if (bandera == true){
+                let parrafo = document.createElement("p")
+                    parrafo.textContent = `El número se encuentra en la lista en la posición ${posicion}. El número es ${dato}.`
+                    document.body.appendChild(parrafo)
+            }
+            else{
+                let parrafo1 = document.createElement("p")
+                    parrafo1.textContent = "El número no se encuentra en la lista."
+                    document.body.appendChild(parrafo1)
+
+            }        
+        }
+        
+
+
+    </script>
+
+    
+
+
+    
+    
+</body>
+</html>
