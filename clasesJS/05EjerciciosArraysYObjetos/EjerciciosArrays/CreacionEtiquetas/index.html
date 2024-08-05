@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Creando etiquetas desde html</h1>
+<h2>The createElement() Method</h2>
+
+<p>Párrafor de presentación:</p>
+<!--Contenedor Div-->
+<div id="myDIV" style="padding:16px;background-color:lightgray">
+    <h3>Título dentro del div</h3>
+</div>
+<!--Botón que muestra elementos js con 1forma de function-->
+<button id="sendButton">Mostrar</button>
+<!--Botón que muestra elementos js con 2forma de function-->
+
+
+<ul id="lista_compras">
+    <li>carne</li>
+    <li>pollo</li>
+    <li>pescado</li>
+</ul>
+
+
+<button onclick="Mostrar_compras()" id="mostrar_compras"> mostrar</button>
+
+<button onclick="lista()" id="lista"> mostrar Elementos lista</button>
+
+<script>
+//Creación de elementos para html
+const parrafo1 = document.createElement("p");
+parrafo1.innerHTML = "Párrafo parrafo1 el div";
+const parrafo2 = document.createElement("p");
+parrafo2.innerText = "Párrafo pra el body";
+const btn = document.createElement("button");
+btn.innerHTML = "Hello Button";
+//Función que muestra elementos p, btn en el body y en un div
+document.getElementById("sendButton").addEventListener("click", function(){
+    // Append to another element:
+    document.getElementById("myDIV").appendChild(parrafo1);
+    document.body.appendChild(parrafo2);
+    document.body.appendChild(btn);
+
+})
+
+function Mostrar_compras(){
+    const node = document.createElement("li")
+    const texto = document.createTextNode("agua")
+    node.appendChild(texto)
+    document.getElementById("lista_compras").appendChild(node)
+
+    
+    
+}
+
+    
+
+
+function lista (){
+    const compras = ["arroz", "jugo", "agua"]
+
+    for (let elemento of compras){
+        const node1 = document.createElement("li")
+        const texto1= document.createTextNode(elemento)
+        node1.appendChild(texto1)
+        document.getElementById("lista_compras").appendChild(node1)
+
+}
+}
+
+</script>
+
+</body>
+</html>

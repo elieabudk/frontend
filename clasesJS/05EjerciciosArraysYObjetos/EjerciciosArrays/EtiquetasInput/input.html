@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Etiquetas label y listas</h1>
+    <!--Input-->
+    <input type="text" id="ingresar_valores">
+    <!--Boton-->
+    <button onclick="Mostrar()" id="mostrar">enviar</button>
+    
+    <!--Lista desordenada vacía (solo elementos ul)-->
+    <ul id="lista">
+        <li></li>
+       
+    </ul>
+
+    <!---->
+    <script>
+        //Función que muestra los datos
+    const listaDatos = [];
+    function Mostrar(){
+        let datos =  document.getElementById("ingresar_valores").value
+
+        listaDatos.push(datos)
+        const node = document.createElement("li")
+        const texto= document.createTextNode(datos)
+        node.appendChild(texto)
+        document.getElementById("lista").appendChild(node)
+        document.getElementById("ingresar_valores").value = " "
+        console.log(listaDatos)
+
+    }    
+
+
+
+
+    </script>
+</body>
+</html>

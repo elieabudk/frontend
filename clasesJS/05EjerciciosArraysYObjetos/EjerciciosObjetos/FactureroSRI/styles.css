@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Puedes personalizar más los estilos aquí, por ejemplo: */
+/*
+select, input {
+    width: 200px;
+    padding: 5px;
+}
+*/
