@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Validación de formularios</title>
+</head>
+<body>
+
+    <div>
+        <label for="ingrso_datos">ingrese usuario</label>
+    </div><br>
+    <div>
+        <input id="ingrso_datos" type="text" placeholder="usuario">
+
+    </div><br>
+    <div>
+        <button id="enviar" onclick="EnvioDatos()" >enviar</button><br>
+    </div><br>
+    <div>
+        <p id="parrafo"></p>
+        
+    </div>
+
+
+
+    <!--Un input y un botón-->
+    <script>
+        //Validación de formularios (arrow function)
+    const EnvioDatos = () =>{
+        const dato = document.getElementById("ingrso_datos").value
+        if(dato=="" ){
+            document.getElementById("parrafo").textContent = "texto invalido"
+
+        }
+        else {
+        for (let i of dato){
+            if(i == '"' || i == "{" || i =="}"){
+                alert(i)
+                document.getElementById("parrafo").textContent = "texto invalido"
+            }
+
+        }
+    }
+        
+    }
+
+    
+
+
+
+        //Validar que el campo no esté vacío
+    </script>
+</body>
+</html>

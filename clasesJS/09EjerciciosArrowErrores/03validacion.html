@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validación de Formulario</title>
+</head>
+<body>
+
+  <form id="miFormulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    const usuarios = {
+        
+    }
+    //Manejar los eventos del formulario
+    //Variable que almacena a todo el formulario
+    const formulario = document.getElementById('miFormulario');
+    //Eventos de formularios
+    formulario.addEventListener('submit', (event) => {
+      event.preventDefault(); // Evita el envío del formulario por defecto
+      const nombre = document.getElementById('nombre').value;
+      if (nombre === "") {
+        alert("Por favor, ingresa tu nombre.");
+      } else {
+        alert("Formulario enviado correctamente!");
+        // Aquí puedes hacer lo que quieras con los datos del formulario
+      }
+    });
+  </script>
+</body>
+</html>

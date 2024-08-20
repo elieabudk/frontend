@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador invertido</title>
+</head>
+<body>
+    <!--Etiqueta-->
+    <p id="contador_regresivo"></p>
+    <h1>Reloj digital</h1>
+    <p id="relojParafo"></p>
+
+    <script>
+        
+
+    const fecha = () =>{
+        const inter = setInterval(()=>{
+        const d = new Date()
+        const horas = d.getHours().toString();
+        const anio = d.getFullYear().toString()
+        const mes = d.getMonth() +1
+        const dia = d.getDate()
+        const minutos = d.getMinutes()
+        const segundos = d.getSeconds()
+        const tiempo = `${anio}, ${mes}, ${dia}, ${horas}, ${minutos}, ${segundos}`
+        document.getElementById("relojParafo").textContent = tiempo
+    },1000)
+    }
+ //Set interval (Tomar un tiempo para ejecutar una función INFINITAMENTE)
+ //Asignamos una variable para poder detenerlo       
+    const contador = () => {
+        let conteo = 10
+   
+    
+    const intervalo = setInterval(()=>{
+    
+    conteo--;
+    document.getElementById("contador_regresivo").textContent = conteo
+    if (conteo === 0){
+         clearInterval(intervalo);
+         document.getElementById("contador_regresivo").textContent = "fin del conteo"
+    }
+    console.log(conteo);
+},1000);
+//Imprimo la variable contador fuera del setInternval
+
+
+}
+fecha()
+contador()
+    </script>
+</body>
+</html>

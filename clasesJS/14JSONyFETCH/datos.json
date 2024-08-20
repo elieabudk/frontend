@@ -1,0 +1,9 @@
+{
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Madrid",
+    "hobbies": ["leer", "correr", "cocinar"],
+    "esEstudiante": false
+  }
+
+  

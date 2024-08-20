@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="div1">
+    
+    <h1 id="tituloEspecial">Titulo del Contenido</h1>
+    <p>Este es un párrafo de contenido.</p>
+    <div class="div1">
+
+    <script>
+    const nuevoParrafo = document.createElement('p');
+    const nuevoParrafoTexto = document.createTextNode('Este es un nuevo párrafo dinámico.');
+    nuevoParrafo.appendChild(nuevoParrafoTexto);
+    document.getElementById('div1').insertBefore(nuevoParrafo, document.querySelector('h1'));
+
+    </script>
+</div>
+</body>
+</html>
