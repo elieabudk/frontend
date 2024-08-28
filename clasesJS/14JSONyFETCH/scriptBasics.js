@@ -5,7 +5,7 @@
 
 
 //1 forma
-fetch('datos.json')
+fetch('datos.json') //Enviar una peticion a una API
     .then(datosUsuario => datosUsuario.json()) //conversion
     .then(respuesta => {
         //Crear el nuevo elemento
@@ -23,14 +23,13 @@ fetch('datos.json')
 
 //2 forma
 
-/*
+
 async function pedirDAtos(){
     const datosRespuesta = await fetch('datos.json')
-    const respuestaDatos = await datosRespuesta.json()
+    const respuestaDatos = await datosRespuesta.json() //Con fetch
     console.log(typeof respuestaDatos)
     console.log(respuestaDatos.hobbies)
 }
 
 pedirDAtos()
 
-*/

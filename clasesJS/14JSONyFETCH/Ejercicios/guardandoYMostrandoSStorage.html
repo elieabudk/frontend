@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="usuario" id="user" required>
+    <input type="text" placeholder="clave" id="pass" required>
+    <button id="ejecutar" onclick="datos()">ejecutar</button>
+    <div>
+        <p id="vistas"></p>
+    </div>
+    <div >
+        <ul id="lista"></ul>
+    </div>
+    
+    <script>
+
+     
+        function datos(){
+
+        
+
+        let nombreTotal = document.getElementById("user").value
+        
+        //Simular un programa que guarda un inicio de sesión
+        
+        
+      
+        localStorage.setItem('user1', nombreTotal);
+        
+
+        //Mostrar un mensaje si el usuario Elie está registrado
+
+        const nombre = localStorage.getItem('user1');
+        let visit= localStorage.getItem('visitas') || 0;
+        visit = parseInt(visit) + 1;
+        localStorage.setItem('visitas', visit)
+      
+        
+
+        if (nombre === "juan"){
+            alert("bienvenido nuevamente")
+        }
+        else{
+            let clave = document.getElementById("pass").value
+            localStorage.setItem(clave)
+            const pass = localStorage.getItem(clave);
+        }
+
+        console.log("El usuario actulamente registrado es: ",nombre);
+        
+       
+        //console.log(localStorage)
+       
+        console.log(typeof localStorage)
+        
+        let lista = document.getElementById("lista");
+        lista.innerHTML = ""; // Limpia los hijos li de la lista desordenada
+        for (let i in localStorage){
+            console.log(localStorage.getItem(i))
+            let listItem = document.createElement("li");
+            listItem.textContent = `${i}: ${localStorage.getItem(i)}`;
+            lista.appendChild(listItem);
+        }
+            
+        
+        
+    let parrafo = document.getElementById("vistas")
+        parrafo.textContent = "cantidad de visitas:" + visit
+        
+    }
+    
+    
+
+        
+ 
+    
+
+    </script>
+</body>
+</html>

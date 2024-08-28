@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con el navegador</title>
+</head>
+<body>
+    <div id="visit-counter">Visitas: <span id="visit-count">0</span></div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <div id="result">
+            <!-- El contenido se llenará dinámicamente -->
+        </div>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c1e4a, #4a1e2c);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #visit-counter {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            width: 300px;
+        }
+        h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        button {
+            width: 100%;
+            background: linear-gradient(to right, #7c3aed, #3b82f6);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        #result {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+
+    <script>
+        // Función para mostrar usuarios y contraseñas
+        function displayUsers(message = '') {
+            const resultDiv = document.getElementById('result');
+            let content = `<p>${message}</p>`;
+            
+            if (message) {  // Solo mostramos la lista si hay un mensaje (es decir, si se ha iniciado sesión)
+                content += '<h3>Usuarios registrados:</h3><ul>';
+                
+                for(let i = 0; i < localStorage.length; i++) {
+                    const key = localStorage.key(i);
+                    if(key !== 'visits') {  // Excluimos la clave 'visits' del contador
+                        content += `<li>Usuario: ${key}, Contraseña: ${localStorage.getItem(key)}</li>`;
+                    }
+                }
+                
+                content += '</ul>';
+            }
+            
+            resultDiv.innerHTML = content;
+        }
+
+        // Función para contar visitas
+        function countVisits() {
+            let visits = localStorage.getItem('visits');
+            visits = visits ? parseInt(visits) + 1 : 1;
+            localStorage.setItem('visits', visits);
+            document.getElementById('visit-count').textContent = visits;
+        }
+
+        // Llamar a las funciones cuando se carga la página
+        window.onload = function() {
+            countVisits();
+            displayUsers();  // Esto ahora solo mostrará el div vacío
+        };
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Previene el envío del formulario
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (localStorage.getItem(username) !== null) {
+                alert('El usuario ya existe y no se puede volver a usar.');
+                return;
+            }
+            
+            localStorage.setItem(username, password);
+            
+            countVisits();
+            displayUsers('Datos almacenados correctamente');  // Esto mostrará la lista
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
