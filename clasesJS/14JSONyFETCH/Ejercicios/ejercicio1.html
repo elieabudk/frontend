@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+
+console.log(text)
+console.log(typeof text)
+
+//Conversión
+const obj = JSON.parse(text);
+console.log(obj);
+console.log(typeof obj);
+
+//Objeto nuevo
+
+const obj2 = {name: "John", age: 30, city: "New York"};
+
+
+const myJSON = JSON.stringify(obj2)
+
+console.log( "Json: ",myJSON)
+console.log(typeof myJSON)
+
+//Guardarlo en la memoria del computador
+
+    </script>
+</body>
+</html>
