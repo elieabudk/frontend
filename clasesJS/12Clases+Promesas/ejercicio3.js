@@ -54,7 +54,6 @@ class PriorityOrder extends Order{
                 }
             },3000)
         })
-
     }
     }
 
