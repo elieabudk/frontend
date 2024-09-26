@@ -1,0 +1,32 @@
+#titulo{
+    float: left;
+    margin-top: 100px;
+    margin-left: 200px;
+    width: 600px;
+    border: 3px solid #73AD21;
+    
+}
+
+#parrafo{
+    margin-left: 200px;
+    float: left;
+    border: 3px solid #73AD21;
+    width: 200px;
+    
+    
+
+}
+
+#input{
+    float: left;
+    margin-left: 50px;
+    width: 200px;
+    margin-top: -50px;
+    
+    border: 3px solid #73AD21;
+    text-align: center;
+
+    
+    
+    
+}
