@@ -1,0 +1,49 @@
+.container{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.banner{
+    border-style: solid;
+    padding-bottom: 30%;
+}
+
+.logo{
+    display: inline;
+    float: left;
+    border-style: solid;
+    margin-left: 30%;
+    margin-right: 20%;
+
+}
+.buscador{
+    
+    border-style: solid;
+    text-align: center;
+}
+.nav-menu{
+    margin-left: 30%;
+    border-style: solid;
+
+    
+}
+.nav-menu li{
+    display: inline;
+    border-style: solid;
+    margin: 1%;
+    
+}
+
+.elementos{
+    border-style: solid;
+    padding-bottom: 10%;
+    
+}
+
+.elementos p{
+    display: inline;
+    margin : 10%;
+    
+
+}
